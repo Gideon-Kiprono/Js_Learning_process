@@ -39,23 +39,42 @@ console.log(geetAreaOfCircle(9));
 // geetAreaOfCircle(7);//153.958
 // geetAreaOfCircle(14);//615.832
 // geetAreaOfCircle(21);//1385.622
+
 //Discuss different naming conventions in web programming (css classes and javascript variables)
-// CSS Classes:
-
+// PascalConvention
 // Hyphen Delimited (kebab-case): This convention uses hyphens to separate words in class names. For example, .header-container or .nav-item.
-
 // Underscore Delimited (snake_case): This convention uses underscores to separate words in class names. For example, .header_container or .nav_item.
+// camelCase: In this convention, the first letter of each word (except the first word) is capitalized, without any delimiter. For example, .headerContainer or .navItem.
 
-// Camel Case: In this convention, the first letter of each word (except the first word) is capitalized, without any delimiter. For example, .headerContainer or .navItem.
-
-// BEM (Block Element Modifier): BEM is a popular naming convention that provides a clear and hierarchical structure to CSS classes. It consists of three parts: block, element, and modifier. For example, .header, .header__logo, or .header--dark.
-
-// JavaScript Variables:
-
-// Camel Case: Camel case is commonly used in JavaScript for variable and function names. It starts with a lowercase letter and capitalizes the first letter of each subsequent concatenated word. For example, myVariable or getUserData().
-
-// Underscore Delimited (snake_case): Although less common in JavaScript, some developers use underscore delimiters to separate words in variable names. For example, my_variable or get_user_data().
-
-// Hungarian Notation: Hungarian notation prefixes variables with characters representing their type or purpose. It was more prevalent in older programming languages but is less popular in modern JavaScript. For example, strName for a string or bIsVisible for a boolean.
 // Discuss the variables naming rule in Javascript
+//Start with a letter: Variable names in JavaScript must begin with a letter (a-z, A-Z) or an underscore (_). They cannot start with a number or any other special character.
+// 2. Start with a lowercase letter: JavaScript variables should begin with a lowercase letter. It's a common convention to use lowercase for the first letter of the variable name, unless it's a constructor function or a class.
+//3.Use camelCase: JavaScript typically adopts camelCase for variable names.For example: firstName, totalAmount, isAuthenticated.
+//4.Avoid reserved keywords: Examples of reserved keywords include function, let, class, if, return, and so on.
+
+//Conventions
+//1. Use descriptive and meaningful names: Choose names that accurately describe the purpose or content of the variable.
+
+//Discuss the different types of errors and when they occur
+//1. Reference errors
+//2. Syntax Errrors
+// 3. Type errors
+
 //Write a function called  reverseString that takes a string as a parameter and returns the reverse version of the string
+
+function reverseString(str) {
+  // Split the string into an array of characters
+  var strArray = str.split('');
+
+  // Reverse the array
+  var reversedArray = strArray.reverse();
+
+  // Join the array elements into a string
+  var reversedString = reversedArray.join('');
+
+  // Return the reversed string
+  return reversedString;
+}
+var originalString = 'Hello, World!';
+var reversed = reverseString(originalString);
+console.log(reversed); // Outputs: "!dlroW ,olleH"
