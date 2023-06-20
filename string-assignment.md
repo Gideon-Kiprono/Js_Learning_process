@@ -10,7 +10,9 @@ Longest word in a string: Write a function that takes a string as an argument an
 
 - Word Count: Count the total number of words in the paragraph. Ignore punctuation and consider hyphenated words as a single word.
 
+
 - Longest Word: Find and display the longest word in the paragraph. In case of multiple words with the same longest length, display the first one encountered.
+
 
 - Word Frequency: Determine the frequency of each word in the paragraph. Create an object where the keys are the unique words and the values are the corresponding frequencies.
 

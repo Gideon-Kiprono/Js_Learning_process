@@ -16,3 +16,15 @@ logSquare("seven");
 // console.log(isNaN(7)); //false
 // console.log(isNaN("7")); // false
 // console.log(isNaN("seven")); //true
+console.log("************");
+
+function logsSquare(num) {
+  if (typeof num == "number") {
+    console.log(num ** 2);
+  } else {
+    console.log("The value is not a number");
+  }
+}
+logsSquare(9);
+logsSquare(10);
+logsSquare("seven");
