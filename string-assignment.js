@@ -94,13 +94,67 @@ console.log(
 );
 /*- Longest Word: Find and display the longest word in the paragraph. 
 In case of multiple words with the same longest length, display the first one encountered.*/
+let paragraph =
+  "JavaScript is an amazing programming language. It is versatile and widely used in web development. JavaScript allows developers to create interactive and dynamic web pages.";
+// let words = paragraph.replace(/[^\w\s]/g, "").split(" ");//// Remove punctuation marks and split the paragraph into an array of words
+// console.log(words);
+// let longestWord = "";
+// let longestLength = 0;
+function findLongestWord(paragraph) {
+  // Remove punctuation marks and split the paragraph into an array of words
+  var words = paragraph.replace(/[^\w\s]/g, "").split(" ");
+
+  // Initialize variables to store the longest word and its length
+  var longestWord = "";
+  var longestLength = 0;
+
+  // Iterate through each word in the array
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i];
+
+    // Check if the current word is longer than the previous longest word
+    if (word.length > longestLength) {
+      longestWord = word;
+      longestLength = word.length;
+    }
+  }
+
+  return longestWord;
+}
+
+var longestWord = findLongestWord(paragraph);
+
+console.log("Longest Word:", longestWord);
 
 
 /*- Word Frequency: Determine the frequency of each word in the paragraph. 
 Create an object where the keys are the unique words and the values are the corresponding frequencies.*/
+function analyzeParagraph(paragraph) {
+  // Remove punctuation and convert to lowercase
+  const cleanedParagraph = paragraph.replace(/[^\w\s]/g, "").toLowerCase();
 
-/*- Most Frequent Word: Identify the word(s) with the highest frequency in the paragraph. 
-Display the word(s) and its frequency. If there are multiple words with the same highest frequency, display all of them.*/
+  // Split the paragraph into an array of words
+  const words = cleanedParagraph.split(" ");
+
+  // Create an object to store word frequencies
+  const wordFrequency = {};
+
+  // Count the frequency of each word
+  for (let word of words) {
+    if (wordFrequency[word]) {
+      wordFrequency[word]++;
+    } else {
+      wordFrequency[word] = 1;
+    }
+  }
+
+  return wordFrequency;
+}
+const frequencies = analyzeParagraph(paragraph);
+console.log(frequencies);
+
+
+
 
 /*Your program should take the paragraph as input and output the results.
 
