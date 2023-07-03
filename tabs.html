@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+  <style>
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+.tab {
+  flex: 1;
+}
+.tab-btn {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+}
+.tab-content {
+  display: none;
+  padding: 10px;
+}
+
+.active {
+  background-color: #ccc;
+}
+
+.tab-content.active {
+  display: flex;
+  margin-left: 10px;
+}
+</style>
+
+</head>
+<body>
+  <div class="tabs">
+  <div class="tab">
+    <button class="tab-btn" onclick="openTab(event, 'tab1')">tab one</button>
+    <p class="tab-content" id="tab1" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reiciendis odio recusandae facilis incidunt delectus rerum nostrum vitae, ipsa minus quod repudiandae, alias atque deserunt fugit illum natus cum voluptatum beatae placeat nisi non voluptatem dolorum! Consectetur possimus, fuga tempora asperiores blanditiis doloremque exercitationem quae sequi dolore, nostrum adipisci autem at architecto natus recusandae qui aperiam! Quod aliquid dolores dolore iste similique consequuntur repellendus magnam in aliquam atque optio, quis impedit quae nulla adipisci esse beatae sapiente quaerat eum. Atque aliquid consequuntur quis voluptates, harum hic suscipit aspernatur! Animi, ad id. Debitis corporis, est velit explicabo aperiam molestias eligendi a, omnis earum corrupti deleniti. Rem eum similique architecto est explicabo autem at dolorum enim ratione neque aut deleniti temporibus quisquam suscipit odio incidunt recusandae ea, saepe nam et nihil officiis sit? Sequi ullam aut ipsa vitae.</p>
+  </div>
+  <div class="tab">
+    <button class="tab-btn" onclick="openTab(event, 'tab2')">tab two</button>
+    <p class="tab-content" id="tab2" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolore facere esse nam sunt adipisci modi officia veniam vero, commodi id, fugiat sit unde, tempore rerum. Labore odit dolores rem praesentium, maxime ex! Minus veniam ipsa reiciendis voluptate minima earum iste! Placeat quam atque provident sit ducimus architecto mollitia quis modi nihil. Iste, ipsum recusandae, doloremque odio quidem quasi beatae illum voluptates magnam vero illo ducimus dolorum non soluta molestias laudantium id iure enim possimus, voluptatibus tempore nihil. Molestiae at quos veniam praesentium provident enim fugit voluptate, commodi, quidem, totam assumenda iure nesciunt distinctio eaque facere? Accusantium culpa, quaerat minus distinctio exercitationem aut consequuntur molestias repellat est quo libero ipsum nulla odio nihil ab officia. Rem suscipit repellendus obcaecati, nesciunt, molestiae tempora iusto qui possimus odio ut id officia nihil soluta, consectetur ipsa aut. Quaerat quasi fugiat voluptate tempore quibusdam ipsum, perferendis deserunt? Dolorem necessitatibus omnis aut modi nam iure veniam saepe unde aperiam quaerat nesciunt animi, qui aliquid dicta blanditiis expedita dolorum nulla error perspiciatis explicabo rerum perferendis soluta voluptate! Earum nobis dolorum, temporibus voluptate delectus fugiat error ex cum aspernatur ad ab nam illo et, velit magni maiores? Magni, sapiente nam! Voluptatibus minus dolore deserunt laudantium libero illum est et vel quia eum rem voluptate aliquam reprehenderit, fugit animi. Perferendis magnam praesentium et accusantium sapiente porro pariatur iusto blanditiis doloremque ab nam repellat, rem beatae dolore. Optio incidunt ullam harum, in obcaecati mollitia debitis tenetur animi modi, itaque nemo reiciendis accusamus iste illo sunt doloribus dolore consequatur, necessitatibus voluptates veritatis illum error tempore! Corrupti ea maxime ipsa nulla doloremque fuga nemo reprehenderit consequatur.</p>
+  </div>
+  <div class="tab">
+    <button class="tab-btn" onclick="openTab(event, 'tab3')">tab three</button>
+    <p class="tab-content" id="tab3" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, adipisci? Tenetur culpa, nulla tempore possimus doloremque consequatur illo nam maxime consectetur, expedita beatae. Deleniti aliquam ratione reiciendis possimus laudantium quasi iure ad quas suscipit, sit deserunt exercitationem earum placeat voluptatum reprehenderit adipisci non sequi molestiae vitae. Cum eligendi tempora nam consectetur in repellendus ullam porro itaque expedita, illo ab quas vero vitae assumenda facere sequi repellat excepturi laboriosam beatae delectus laborum sunt. Dolores exercitationem quasi tempore? Sint maxime delectus reprehenderit exercitationem dolorem officiis fuga? Ducimus minima ratione non odio aliquid est voluptatibus quod laboriosam explicabo perspiciatis sapiente ipsa modi rem deleniti dicta, voluptatem necessitatibus enim inventore dignissimos quibusdam, ut eos qui temporibus rerum. Error aliquam exercitationem accusantium ad debitis eius, reiciendis vero! Nobis quos doloremque tempora nam dolorum amet in rem asperiores mollitia nulla ullam quis, fugit neque est aliquid a adipisci impedit libero, eius quam deleniti! Veniam minus pariatur, unde animi eligendi doloribus. Quia, ipsam accusantium? Sapiente nulla provident vel, ipsam ad animi est earum at, fugiat, illum exercitationem quas recusandae. Doloribus ipsa quos sunt culpa labore et autem, at reprehenderit odit quae commodi voluptatem? Tempora nulla dolores beatae perferendis ex soluta quia officia provident non animi hic, fuga officiis iure. Vero aliquid architecto deleniti earum vitae voluptate non fuga quisquam labore cum, nemo quam nesciunt rerum hic ullam asperiores animi? Maiores reiciendis porro, officia delectus iusto eaque maxime recusandae voluptates obcaecati vel rerum suscipit nostrum debitis nihil libero ipsam amet?</p>
+  </div>
+  <div class="tab">
+    <button class="tab-btn" onclick="openTab(event, 'tab4')">tab four</button>
+    <p class="tab-content" id="tab4"style="display: none;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ea totam vitae deserunt harum inventore possimus quo, tempora placeat? Pariatur nostrum ratione, nisi repudiandae voluptatum consequuntur delectus accusantium dolorum consequatur provident unde dolorem beatae possimus aperiam velit similique optio, eum alias eius reiciendis id natus. Quidem nobis quam, aut animi voluptates aliquid atque maxime totam blanditiis vel tempora, reiciendis consectetur natus omnis consequuntur. Necessitatibus, ratione. Modi rerum ipsum maiores, voluptatibus quibusdam ratione ex eaque eveniet ab doloribus, enim dolores. Qui molestiae et expedita quia placeat nobis fugit mollitia eius inventore aperiam, temporibus, repellat praesentium iure ea excepturi. Quis exercitationem aliquam illum pariatur asperiores vero reiciendis velit, totam atque doloribus accusamus quibusdam nobis corporis error tenetur inventore numquam sapiente!</p>
+  </div>
+</div>
+
+  <!-- <div class="tabs">
+    <div class="tab">
+      <button class="tab-btn">tab one</button>
+      <p class="tab-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat labore voluptate, rem inventore dolorum atque magnam, ad animi, sed et quos eveniet expedita quo? Cupiditate hic id blanditiis fuga ullam amet deserunt temporibus reprehenderit similique, totam inventore! Dolorem expedita assumenda non nisi, incidunt a quasi labore sint, soluta aliquam, pariatur possimus quod.</p>
+    </div>
+    <div class="tab">
+      <button class="tab-btn">tab two</button>
+      <p class="tab-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat labore voluptate, rem inventore dolorum atque magnam, ad animi, sed et quos eveniet expedita quo? Cupiditate hic id blanditiis fuga ullam amet deserunt temporibus reprehenderit similique, totam inventore! Dolorem expedita assumenda non nisi, incidunt a quasi labore sint, soluta aliquam, pariatur possimus quod.</p>
+    </div>
+    <div class="tab">
+      <button class="tab-btn">tab three</button>
+      <p class="tab-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat labore voluptate, rem inventore dolorum atque magnam, ad animi, sed et quos eveniet expedita quo? Cupiditate hic id blanditiis fuga ullam amet deserunt temporibus reprehenderit similique, totam inventore! Dolorem expedita assumenda non nisi, incidunt a quasi labore sint, soluta aliquam, pariatur possimus quod.</p>
+    </div>
+    <div class="tab">
+      <button class="tab-btn">tab three</button>
+      <p class="tab-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat labore voluptate, rem inventore dolorum atque magnam, ad animi, sed et quos eveniet expedita quo? Cupiditate hic id blanditiis fuga ullam amet deserunt temporibus reprehenderit similique, totam inventore! Dolorem expedita assumenda non nisi, incidunt a quasi labore sint, soluta aliquam, pariatur possimus quod.</p>
+    </div>
+  </div> -->
+  <script src="./tabs.js"></script>
+</body>
+</html>
